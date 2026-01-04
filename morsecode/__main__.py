@@ -74,9 +74,9 @@ def main():
         ID_REPEAT = 3
 
         for i in range(ID_REPEAT):
-            winsound.Beep(512, 1000)
-            winsound.Beep(739, 1000)
-            winsound.Beep(899, 1000)
+            winsound.Beep(512, 1000) # C5
+            winsound.Beep(739, 1000) # F sharp 5
+            winsound.Beep(899, 1000) # A4
             time.sleep(1)
 
         time.sleep(0.5)
