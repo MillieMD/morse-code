@@ -6,6 +6,6 @@ setup(
     packages = ['morsecode'],
     entry_points = {
         'console_scripts': [
-            'morse = morsecode.__main__:main'
+            'morse-code = morsecode.__main__:main'
         ]
     })
