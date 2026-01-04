@@ -13,3 +13,6 @@ usage: morse-code [-h] [-o] [--time TIME] [--freq FREQ] message
 
 `--freq` is the frequency of a beep, in Hertz.
 
+## Installation
+
+Run `install.bat` *or* run `pip3 install -e .` from the root directory of the repository, to install as a CLI tool.

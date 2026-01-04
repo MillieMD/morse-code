@@ -7,6 +7,44 @@ import argparse
 TIME_UNIT = 300
 FREQ = 700
 
+morse = { 
+"A":".-",
+"B":"-...",
+"C":"-.-.",
+"D":"-..",
+"E":".",
+"F":"..-.",
+"G":"--.",
+"H":"....",
+"I":"..",
+"J":".---",
+"K":"-.-",
+"L":".-..",
+"M":"--",
+"N":"-.",
+"O":"---",
+"P":".--.",
+"Q":"--.-",
+"R":".-.",
+"S":"...",
+"T":"-",
+"U":"..-",
+"V":"...-",
+"W":".--",
+"X":"-..-",
+"Y":"-.--",
+"Z":"--..",
+"0":"-----",
+"1":".----",
+"2":"..---",
+"3":"...--",
+"4":"....-",
+"5":".....",
+"6":"-....",
+"7":"--...",
+"8":"---..",
+"9":"----." }
+
 # DICTIONARY STUFF
 def init_dict(d, filename) -> dict:
     """Initialise a given dictionary from a .txt file.
@@ -38,9 +76,6 @@ def play_from_string(string : str, freq : int, time_unit_ms : int):
 
 def main():
 
-    morse = {}
-    init_dict(morse, "morse.txt")
-
     parser = argparse.ArgumentParser(
         prog="morse-code",
         description="Play morse code from a string",
@@ -52,7 +87,7 @@ def main():
     parser.add_argument("--freq", default=700, help="beep sound frequency in hertz")
 
     args = parser.parse_args()
-    
+
     message = args.message.upper()
     frequency = args.freq
     time_unit_ms = args.time
@@ -80,4 +115,5 @@ def main():
         play_from_string(morse_string, frequency, time_unit_ms)
         time.sleep(time_unit_s * 3)
 
-main()
+if __name__ == '__main__':
+    main()
