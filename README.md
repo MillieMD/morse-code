@@ -7,7 +7,7 @@ Play morse code from a string
 ```
 usage: morse-code [-h] [-o] [--time TIME] [--freq FREQ] message
 ```
-`-o` or `--oddity` can be used to play the [Three Note Oddity]() identifier before the morse-code message.
+`-o` or `--oddity` can be used to play the [Three Note Oddity](https://www.numbers-stations.com/german/g04-three-note-oddity/) identifier before the morse-code message.
 
 `--time` is the length of a single time unit (.), in milliseconds
 
