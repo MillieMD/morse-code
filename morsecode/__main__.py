@@ -83,8 +83,8 @@ def main():
 
     parser.add_argument("message", help="the message to convert to morse code")
     parser.add_argument("-o", "--oddity", action="store_true", help="play the three note oddity identifier")
-    parser.add_argument("--time", default=300, help="the length of a single time unit (.) in milliseconds")
-    parser.add_argument("--freq", default=700, help="beep sound frequency in hertz")
+    parser.add_argument("--time", default=300, help="the length of a single time unit (.) in milliseconds. default is 300ms", type=int)
+    parser.add_argument("--freq", default=700, help="beep sound frequency in hertz. default is 700hz", type=int)
 
     args = parser.parse_args()
 
