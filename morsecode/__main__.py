@@ -4,9 +4,6 @@ import time
 import winsound
 import argparse
 
-TIME_UNIT = 300
-FREQ = 700
-
 morse = { 
 "A":".-",
 "B":"-...",
@@ -45,27 +42,6 @@ morse = {
 "8":"---..",
 "9":"----." }
 
-# DICTIONARY STUFF
-def init_dict(d, filename) -> dict:
-    """Initialise a given dictionary from a .txt file.
-    The file should use comma seperated key-value pairs, each on a new line.
-    
-    d -- dictionary to initialise
-    filename -- string, filename to read data from
-    """
-    f = open(filename)
-    content = f.read()
-
-    for line in content.split("\n"):
-        key, value = line.split(",")
-        d[key.strip()] = value.strip()
-    
-
-def key_from_dict_value(d, value):
-    return [key for key, item in d.items() if item == value]
-
-
-# MORSE CODE STUFF
 def play_from_string(string : str, freq : int, time_unit_ms : int):
     for c in string:
         if c == ".":
